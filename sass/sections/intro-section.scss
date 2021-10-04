@@ -1,0 +1,111 @@
+// ======================================VARIABLES & mixin=================================
+
+@mixin grad{
+    background: linear-gradient(to right,rgba($primary,0.95),rgba($secondary,0.95));
+}
+
+//absolute center mixin:
+@mixin absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%)
+}
+
+
+
+// MY-THEME-COLOR
+$purple-dark:  #9926f0;
+$purple-light:  #bb6ef5;
+$pink:    #d122e3;
+
+// START gray and white-color-variables
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+// END gray and white-color-variables
+
+$primary:       $purple-dark;
+$secondary:     $pink;
+
+
+.display-2{
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+
+    &--intro{
+        display: inline-block;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+    }
+    &--description{
+        font-size: 1.5rem;
+        display: block;
+        margin-top: 1.2rem;
+        text-transform:none;
+    }
+}
+
+.intro-section{
+    @include grad;
+    padding: 10rem 0 0 0;
+    width: 100%;
+    height: 100%;
+}
+
+.intros{
+
+
+    .video-box{
+        position: relative;
+        a{
+            // @include absoluteCenter;
+            span{
+                i{
+                    font-size:6rem;
+                    color:$secondary;
+                }
+            }
+        }
+    }
+}
+
+
+.border-animation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:6rem;
+    height:6rem;
+    border: 0.55rem solid $white;
+    border-radius: 50%;
+    animation:pulse-border 1.5s linear infinite;
+
+    &--border-1{
+        animation-delay: 1s;
+    }
+    &--border-2{
+        animation-delay: 1.5s;
+    }
+}
+
+@keyframes pulse-border{
+    0%{
+        transform:scale(1);
+        opacity: 1;
+    }
+
+    100%{
+        transform:scale(1.5);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,76 @@
+
+// MY-THEME-COLOR
+$purple-dark:  #9926f0;
+$purple-light:  #bb6ef5;
+$pink:    #d122e3;
+
+// START gray and white-color-variables
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+// END gray and white-color-variables
+
+$primary:       $purple-dark;
+$secondary:     $pink;
+
+
+//GRADIANT MIXIN:
+@mixin grad {
+    background: linear-gradient(to right,rgba($primary,0.95),rgba($secondary,0.95));
+}
+
+body {
+    position: relative; 
+}
+
+.menu{
+    @include grad;
+    li{
+        padding: 0 0.7rem;
+        a{
+            color: $white !important;
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+    }
+}
+
+.btn-rounded{
+    
+    position: relative;
+    padding:0.9375rem 4.375rem 0.9375rem 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    border: 0.1rem solid rgba($white,0.6);
+    background-color: $white;
+    span{
+        position: absolute;
+        background-color:$primary;
+        width:2.5rem;
+        height: 2.5rem;
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        i{
+            color:$white;
+            font-size:1rem;
+            line-height: 2.5rem;
+        }
+    }
+    &:hover{
+        @include grad;
+        color:$white;
+        span{
+            background-color: rgba($black,0.6);
+        }
+    }
+}

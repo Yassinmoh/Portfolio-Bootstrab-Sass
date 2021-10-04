@@ -1,0 +1,71 @@
+// MY-THEME-COLOR
+$purple-dark:  #9926f0;
+$purple-light:  #bb6ef5;
+$pink:    #d122e3;
+
+// START gray and white-color-variables
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+// END gray and white-color-variables
+
+$primary:       $purple-dark;
+$secondary:     $pink;
+
+button.btn.btn-primary.rounded-pill.pt-3.pb-3 {
+    background-color: $primary;
+}
+
+.get-started{
+    padding: 4rem 0;
+    background-color:$gray-200;
+}
+.gradient{
+    background: linear-gradient(to right,rgba($primary,0.95),rgba($secondary,0.95));
+}
+
+.cta-info{
+    padding:3rem;
+    margin: 1rem 0;
+
+    &__list{
+        position: relative;
+        list-style-type: none;
+        display: block;
+        padding-top: 0.5rem;
+        padding-left: 0.5rem;
+        margin-bottom: 0.7rem;
+
+
+        li::before{
+            font-family: "Font Awesome 5 pro"; 
+            font-weight: 600;
+            content: "\f00c";
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+    }
+}
+.form{
+    padding:3rem;
+
+    button{
+        border:none;
+        color: $white;
+
+        a{
+            color:$white;
+            text-decoration: none;
+            text-transform: capitalize;
+
+        }
+    }
+}

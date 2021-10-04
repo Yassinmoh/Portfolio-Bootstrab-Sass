@@ -1,0 +1,139 @@
+
+// MY-THEME-COLOR
+$purple-dark:  #9926f0;
+$purple-light:  #bb6ef5;
+$pink:    #d122e3;
+$footer:#151414;
+// START gray and white-color-variables
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+// END gray and white-color-variables
+
+$primary:       $purple-dark;
+$secondary:     $pink;
+
+@mixin absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%)
+}
+
+.footer{
+    padding-top:1rem;
+    background-color:$footer;
+}
+
+.contact-box{
+    position: relative;
+
+    &__icon{
+        width: 4rem;
+        stroke: $primary;
+    }
+
+    &__info{
+        padding: 0.4rem;
+        font-weight: 600;
+        &--title{
+            color:$white;
+            text-decoration: none;
+            font-size: 1.4rem;
+        }
+
+        &--subtitle{
+            font-size: 1rem;
+            color: $gray-600;
+            text-decoration: none;
+
+        }
+    }
+}
+
+
+//second footer:
+
+.footer-sm{
+
+    a{
+        color: $white;
+
+        i{
+            font-size: 1.5rem;
+            margin-left: 1rem;
+            &:hover{
+                color: $primary;
+                transform: scale(1.5);
+            }
+        }
+    }
+}
+
+// company
+
+.campany-list{
+    display: block;
+    list-style-type: none;
+    position: relative;
+
+    li{
+        margin-bottom: 0.5rem;
+        text-decoration: none;
+
+        a{
+            color: $white;
+            text-decoration: none;
+
+            &:hover{
+                color: $primary;
+            }
+        }
+    }
+}
+
+// copyright
+.footer-bottom{
+    background-color:$black;
+
+    &__copyright{
+        color: $gray-600;
+        font-weight: 400;
+
+        a{
+            color: $gray-300;
+            text-decoration: none;
+
+            &:hover{
+                color: $primary;
+                text-decoration: underline;
+
+            }
+        }
+    }
+}
+
+// back-to-top
+.back-to-top{
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    right: 1.875em;
+    bottom: 1.875em;
+    z-index: 99999;
+    background-color:$primary ;
+
+    i{
+        color: $white;
+        font-size:1rem;
+        @include absoluteCenter;
+    }
+}
